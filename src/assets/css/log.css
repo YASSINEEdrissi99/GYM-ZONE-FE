@@ -1,0 +1,86 @@
+.log_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    border-radius: 5px;
+    border: solid 1px white;
+
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px gray;
+    width: 450px;
+    padding: 25px;
+}
+.log_box h1{
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 3px;
+    font-weight: bold;
+    color: white;
+}
+.log_box .input_box{
+    width: 100%;
+    height: 50px;
+    margin: 20px 0;
+    position: relative;
+}
+.input_box input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border: 2px solid gray;
+    border-radius: 40px;
+    padding: 20px 45px 20px 20px;
+    background-color: transparent;
+    color: white;
+}
+
+.input_box input::placeholder{
+   /* margin-left: 15px;*/
+   font-weight: 400;
+   color: white;
+}
+
+.input_box i{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+}
+.remember{
+    font-weight: normal;
+    font-size: 15px;
+
+}
+
+.remember label input{
+    margin: 3px;
+    margin-top: 5px;
+    color: white;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+margin-top: 15px;
+    color: black;
+}
+.register_link{
+    text-align: center;
+    margin-top: 15px;
+}
+.register_link p{
+    color: white;
+   
+}
+.register_link p a{
+    text-decoration:dotted;
+    margin-left: 5px;
+}

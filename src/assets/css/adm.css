@@ -1,0 +1,603 @@
+/* Conteneur principal de l'administration */
+.admin {
+    position: absolute;
+    top: 130px;
+    width: 100%;
+    height: 578.59px;
+    display: flex;
+}
+.cont_even {
+    width: 100%;
+    height: 400px;
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+    padding: 20px; /* Adds padding inside the container */
+    box-sizing: border-box; /* Ensures padding is included in the total width/height */
+  }
+
+/* Webkit-based browsers (Chrome, Safari) */
+.cont_even::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.cont_even::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Track background */
+}
+
+.cont_even::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.5); /* Scrollbar thumb background */
+    border-radius: 6px; /* Rounded corners for the scrollbar thumb */
+}
+
+.cont_even::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8); /* Scrollbar thumb background on hover */
+}
+
+/* Firefox */
+.cont_even {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.1); /* Scrollbar thumb and track color */
+}
+.admin-add-user-textarea{
+    width: 100%;
+    border: 2px rgba(236, 236, 236, 0) solid;
+    border-radius:6px ;
+}
+
+/* Conteneur de la première partie de l'administration */
+.admin_bx1 {
+    flex: 1.2;
+    display: flex;
+    margin-top: 60px;
+    align-items: center;
+    flex-direction: column;
+    height: 519.5px;
+    padding: 5px;
+    gap: 15px;
+
+    overflow-y: auto; /* Enables vertical scrolling if content overflows */
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+.admin_bx1::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.admin_bx1::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Track background */
+}
+
+.admin_bx1::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.7); /* Scrollbar thumb background */
+    border-radius: 6px; /* Rounded corners for the scrollbar thumb */
+}
+
+.admin_bx1::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.9); /* Scrollbar thumb background on hover */
+}
+
+/* Firefox */
+.admin_bx1 {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: rgba(255, 255, 255, 0.7) rgba(0, 0, 0, 0.1); /* Scrollbar thumb and track color */
+}
+
+
+/* Conteneur de la deuxième partie de l'administration */
+.admin_bx2 {
+    padding-left: 10px;
+    flex: 5;
+    margin-bottom: 70px;
+    margin-left: 2px;
+    margin-right: 15px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Ajuster l'intensité du flou selon les besoins */
+    background: linear-gradient(to right, rgb(201, 221, 242), rgb(74, 101, 128)); /* Dégradé du clair au foncé */
+    box-shadow: 
+        0 4px 6px rgb(74, 101, 128),
+        0 8px 10px rgba(0, 0, 0, 0.2),
+        0 12px 18px rgba(0, 0, 0, 0.3); /* Ombres superposées pour effet de dégradé */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Style pour le lien de données */
+.datalink {
+    width: 95%;
+    background-color: rgb(221, 233, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid rgb(221, 233, 245);
+    border-radius: 13px;
+    text-decoration: none;
+    color: #214471;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px rgb(36, 99, 208);
+}
+
+.datalink:hover {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-shadow: 0 0 5px white, 0 0 15px rgb(36, 99, 208), 0 0 30px rgb(221, 233, 245);
+    font-size: 19px;
+}
+
+/* Style pour le titre de la section */
+.title {
+    width: 90%;
+}
+
+.title h2 {
+    text-align: center;
+    color: rgb(33, 41, 85);
+    font-family: 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* Style pour le bouton d'ajout de rôle */
+.add-role {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.add-role-btn {
+    background-color: rgb(33, 41, 85);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.add-role-btn:hover {
+    background-color: rgb(24, 30, 62);
+    font-size: 16px;
+}
+
+/* Style pour la table de contenu */
+.content_table {
+    width: 100%;
+    padding-top: 10px;
+    height: 400px;
+    overflow-x: auto; /* Ajouter un défilement horizontal */
+    overflow-y: auto; /* Ajouter un défilement vertical */
+}
+
+.content_table table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    table-layout: fixed; /* Forcer les colonnes à avoir des largeurs fixes */
+}
+
+.content_table thead {
+    display: table;
+    width: 100%;
+}
+
+.content_table tbody {
+    display: block;
+    max-height: 300px; /* Ajuster selon la hauteur souhaitée pour le défilement */
+    overflow-y: auto; /* Activer le défilement vertical pour les lignes de la table */
+}
+
+.content_table th, .content_table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box; /* Inclure le padding et la bordure dans la largeur totale */
+}
+
+.content_table th {
+    background-color: rgb(33, 41, 85);
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    position: -webkit-sticky; /* Pour Safari */
+    position: sticky;
+    top: 0; /* Fixe le th en haut lors du défilement */
+    z-index: 1; /* Assure que les th sont au-dessus des autres éléments */
+}
+
+/* Assurer que les lignes du tableau s'alignent correctement avec les en-têtes */
+.content_table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.content_table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.content_table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Styles pour les boutons d'action */
+.content_table .actions {
+    display: flex;
+    gap: 10px;
+}
+
+.content_table .actions a {
+    color: rgb(33, 41, 85);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.content_table .actions a:hover {
+    color: rgb(24, 30, 62);
+}
+
+/* Styles pour le bouton de suppression */
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: rgb(33, 41, 85);
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.delete-btn:hover {
+    color: rgb(24, 30, 62);
+}
+
+/* Styles pour la barre de défilement personnalisée */
+.content_table::-webkit-scrollbar {
+    width: 12px;
+}
+
+.content_table::-webkit-scrollbar-track {
+    background: rgb(201, 221, 242); /* Couleur de l'arrière-plan de la piste de défilement */
+    border-radius: 10px;
+}
+
+.content_table::-webkit-scrollbar-thumb {
+    background-color: rgb(33, 41, 85); /* Couleur de la barre de défilement */
+    border-radius: 10px;
+    color: rgb(33, 41, 85);
+}
+
+.content_table::-webkit-scrollbar-thumb:hover {
+    background: rgb(24, 30, 62);
+    /* Couleur de la barre de défilement au survol */
+    color: rgb(33, 41, 85);
+}
+
+
+.role-details {
+    background-color: transparent; /* Fond totalement transparent */
+    padding: 20px;
+    border:none; /* Bordure discrète pour délimiter */
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: 'Roboto', sans-serif; /* Police moderne */
+    color: #162b3d; /* Bleu foncé pour la police */
+    text-shadow: 2px 2px 5px #87ceeb, 3px 3px 6px #ffffff; /* Ombre de texte bleu ciel et blanc */
+  }
+  
+  .role-details p {
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin: 5px 0;
+  }
+  
+  .role-details strong {
+    color: #1c3d5a; /* Même bleu foncé pour les labels */
+    text-shadow: 2px 2px 5px #87ceeb, 1px 1px 3px #ffffff; /* Appliquer l'effet d'ombre ici aussi */
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  
+  .title h2 {
+    font-size: 2.4em;
+    color: #1c3d5a; /* Titre en bleu foncé */
+    text-shadow: 2px 2px 5px #87ceeb, 1px 1px 3px #ffffff; /* Effet d'ombre sur le titre */
+  }
+  
+  .back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .back-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  @media (max-width: 768px) {
+    .role-details {
+      padding: 15px;
+    }
+  
+    .title h2 {
+      font-size: 1.8em;
+    }
+  
+    .role-details p {
+      font-size: 1em;
+    }
+  }
+
+
+
+  .events_list{
+    position: absolute;
+    top: 0;
+    margin-top: 140px;
+    width: 100%;
+    height: 569px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    gap: 5px;
+  }
+.events_list_box{
+    background: linear-gradient(135deg, #09203f 10%, #537895 60%);
+
+    flex: 7.5;
+    height: 559px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto; 
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+.events_list_box::-webkit-scrollbar {
+    width: 12px;
+}
+
+.events_list_box::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background of the scrollbar track */
+    border-radius: 6px; 
+}
+
+.events_list_box::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded corners for the scrollbar handle */
+}
+
+.events_list_box::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker color on hover */
+    border-radius: 6px; 
+}
+
+.box_event{
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(120, 121, 121, 0.2); 
+    width: 95%;
+    height: 250px;
+    min-height: 250px;
+    overflow-y: auto; 
+    text-align: center;
+    color: #bae0e6;
+    background: linear-gradient(135deg, #09203f 10%, #537895 60%);
+
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.box_event h3{
+    margin-top: 5px;
+    font-family: 'Alex Brush', cursive;
+    font-size: 32px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-shadow: 0px 2px 4px #bae0e6;
+}
+.box_event p{
+    font-size: 16px;
+    text-shadow: 0px 0px 2px #bae0e6;
+}
+.box_event::-webkit-scrollbar {
+    width: 12px;
+}
+
+.box_event::-webkit-scrollbar-track {
+    background: rgba(235, 236, 237, 0.1); /* Background of the scrollbar track */
+    border-radius: 6px; 
+}
+
+.box_event::-webkit-scrollbar-thumb {
+    background: rgba(49, 49, 49, 0.3); /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded corners for the scrollbar handle */
+    box-shadow: 0px 3px 6px  rgba(49, 49, 49, 0.3);
+}
+
+.box_event::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker color on hover */
+    border-radius: 6px; 
+}
+.events_list_date{
+    flex: 3.5;
+    height: 519px;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto; 
+    gap: 30px;
+    background: linear-gradient(135deg, #09203f 10%, #537895 60%);
+
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2); 
+   
+}
+.events_list_date::-webkit-scrollbar {
+    width: 12px;
+}
+
+.events_list_date::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background of the scrollbar track */
+    border-radius: 6px; 
+}
+
+.events_list_date::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded corners for the scrollbar handle */
+}
+
+.events_list_date::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker color on hover */
+    border-radius: 6px; 
+}
+
+  
+.button_image{
+    background-color: #ddd;
+    width: 120px;
+      margin-top: -16px;
+    border-radius: 25px;
+    margin-bottom: 30px;
+    
+}
+.button_image button{
+    width: 120px;
+    color: #f1f1f1;
+    font-weight:bold ;
+    height: 35px;
+    border-radius: 25px;
+    padding: 4px;
+    background: rgb(33, 41, 85);
+  box-shadow: 0 0 5px rgb(43, 53, 111), 0 0 10px rgb(43, 53, 111), 0 0 15px rgb(43, 53, 111);
+}
+.show1{
+    width: 97%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+   
+}
+.show1 h4{
+    text-align: center;
+    color: white;
+    font-size: 42px;
+font-weight: bold;
+text-shadow: 1px 3px 5px #bae0e6;
+        font-family: 'Alex Brush', cursive;
+      
+      
+}
+.show1 p{
+    text-align: center;
+    color: #bae0e6;
+    font-size: 20px;
+font-weight: bold;
+text-shadow: 1px 3px 5px rgb(29, 59, 76);
+        font-family: cursive;
+      
+       
+}
+.show2 {
+    width: 100%;
+    background-color: #bae0e6;
+    height: 400px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    position: relative; /* Ensure the h4 can be positioned relative to .show2 */
+    overflow: hidden; /* In case the image overflows, it will be contained */
+}
+
+.show2 img {
+    width: 100%;
+    height: 100%; /* Make sure the image fully occupies the show2 container */
+    object-fit: cover; /* Ensure the image scales properly while maintaining aspect ratio */
+}
+
+.show2 h4 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* A semi-transparent background */
+    color: white;
+    font-family: 'Alex Brush', cursive;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+    
+    font-size: 32px;
+font-weight: bold;
+}
+.subscr {
+    margin-top: -45px;
+    position: relative;
+    right: 0px;
+    width: 85%;
+    display: flex;
+    flex-direction: row; /* Changed to row to align items horizontally */
+    justify-content: flex-end; /* Aligns items to the right */
+    margin-bottom: 9px;
+}
+
+.button_subscribe {
+    width: auto;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    height: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Optional: add space between buttons */
+}
+
+.button_unsubscribe {
+    width: auto;
+    height: auto;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border-color: transparent;
+    cursor: pointer;
+    background-color: #f44336; /* Red */
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+}
+.button_subscribe:hover {
+    background-color: #45a049; /* Darker green */
+}
+.button_unsubscribe:hover {
+    background-color: #e53935; /* Darker red */
+}
+
+/* Optional: Adjust margin between buttons */
+
+
+.titleevent{
+    color: white;
+    font-family: 'Alex Brush', cursive;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 13px;
+}

@@ -1,0 +1,75 @@
+/* Add these styles to your adm.css or a dedicated CSS file */
+.flex_activity{
+    display: flex;
+}
+.activity-details {
+    background-color: transparent; /* Fond totalement transparent */
+    padding: 20px;
+    border:none; /* Bordure discrète pour délimiter */
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: 'Roboto', sans-serif; /* Police moderne */
+    color: #162b3d; /* Bleu foncé pour la police */
+    text-shadow: 2px 2px 5px #87ceeb, 3px 3px 6px #ffffff; /* Ombre de texte bleu ciel et blanc */
+    flex:1;
+}
+.activity-image{
+    flex: 1;
+    
+}
+
+.activity-details p {
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
+.activity-details strong {
+    color: #1c3d5a; /* Même bleu foncé pour les labels */
+    text-shadow: 2px 2px 5px #87ceeb, 1px 1px 3px #ffffff; /* Appliquer l'effet d'ombre ici aussi */
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.title h2 {
+    font-size: 2.4em;
+    color: #1c3d5a; /* Titre en bleu foncé */
+    text-shadow: 2px 2px 5px #87ceeb, 1px 1px 3px #ffffff; /* Effet d'ombre sur le titre */
+}
+
+.activity-image img {
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre légère autour de l'image */
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #2980b9;
+}
+
+@media (max-width: 768px) {
+    .activity-details {
+        padding: 15px;
+    }
+
+    .title h2 {
+        font-size: 1.8em;
+    }
+
+    .activity-details p {
+        font-size: 1em;
+    }
+}

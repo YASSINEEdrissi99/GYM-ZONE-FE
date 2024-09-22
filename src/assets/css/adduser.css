@@ -1,0 +1,70 @@
+/* Styles for AddUser page integrated within the Admin layout */
+
+/* Main container to ensure it stays within Admin layout */
+.admin-add-user-content {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 10px auto; /* Centers the content horizontally */
+  }
+  
+  .admin-add-user-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #444;
+  }
+  
+  .admin-add-user-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .admin-add-user-form {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .admin-add-user-label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  .admin-add-user-input, .admin-add-user-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    transition: border 0.3s ease;
+  }
+  
+  .admin-add-user-input:focus, .admin-add-user-select:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  .admin-add-user-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .admin-add-user-btn:hover {
+    background-color: #0056b3;
+  }
+  

@@ -1,0 +1,191 @@
+.show_act_cont {
+    margin-top: 10px;
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    height: 530px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Scrollable grid container */
+.filter_show_act{
+    padding: 5px;
+    flex: 1.3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.filter_show_act h4{
+    color: rgb(188, 207, 224);
+    text-shadow: 0 0 2px white, 0 0 8px rgb(108, 136, 185); /* Glow effect */
+}
+.filter_day{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 5px;
+
+}
+.show_act {
+    flex: 7;
+    width:95%;
+    height: 100%;
+    overflow-y: auto; /* Vertical scrolling enabled */
+    padding-top: 20px;
+    padding-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 10px;
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Shadow for depth */
+    
+}
+
+/* Style for the scrollbar (WebKit browsers) */
+.show_act::-webkit-scrollbar {
+    width: 12px;
+}
+
+.show_act::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background of the scrollbar track */
+}
+
+.show_act::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded corners for the scrollbar handle */
+}
+
+.show_act::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker color on hover */
+}
+
+/* Box grid styling */
+/* Box grid styling */
+.box_grid {
+    background-color: bisque;
+    height: 460px;
+    width: 85%; /* Ensure full width within grid */
+    border-radius: 8px; /* Optional: Rounded corners for the boxes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Shadow for boxes */
+    overflow: hidden; /* Hide any overflow of the image */
+    position: relative; /* Positioning context for the heading */
+}
+
+/* Image styling within box_grid */
+.box_grid img {
+    width: 100%; /* Make the image cover the full width of the container */
+    height: 100%; /* Make the image cover the full height of the container */
+    object-fit: cover; /* Ensure the image covers the container without distortion */
+    display: block; /* Remove bottom margin/spacing */
+}
+
+/* Heading styling */
+.box_grid h2 {
+    font-size: 19px;
+    position: absolute; /* Position it absolutely within the .box_grid */
+    top: 20px; /* Position from the top of the .box_grid */
+    left: 20px; /* Optional: Position from the left of the .box_grid */
+    width: calc(100% - 40px); /* Adjust width to accommodate left and right padding */
+    padding: 10px; /* Optional: Add some padding */
+    color: white; /* Text color to stand out on the image */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    border-radius: 4px; /* Optional: Rounded corners for the background */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+.box_grid .linkchow {
+    position: absolute; /* Position it absolutely within the .box_grid */
+    bottom: 20px; /* Position from the bottom of the .box_grid */
+    left: 20px; /* Optional: Position from the left of the .box_grid */
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+    background-color: white; /* Background color */
+    padding: 10px; /* Optional: Add some padding */
+    border-radius: 4px; /* Optional: Rounded corners for the link */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Shadow for the link */
+}
+
+.box_grid .linkchow:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+.show_flex_activity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background: linear-gradient(to right, rgb(201, 221, 242), rgb(105, 146, 188)); /* Gradient from light to dark */
+    border-radius: 15px;
+    box-shadow:  0 0 5px white, 0 0 10px white, 0 0 15px rgb(36, 99, 208);
+    gap: 0px;
+}
+/* For modern browsers */
+.activity-details1 {
+    flex: 1;
+    font-size: 18px;
+    max-height: 400px; /* Set a max-height to enable scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 10px;
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: rgb(105, 146, 188) rgb(201, 221, 242); /* Thumb color and track color */
+}
+
+/* Custom Scrollbar for Webkit Browsers (Chrome, Safari, Edge) */
+.activity-details1::-webkit-scrollbar {
+    width: 10px;
+}
+
+.activity-details1::-webkit-scrollbar-track {
+    background: rgb(201, 221, 242); /* Light color to match the background */
+    border-radius: 10px;
+}
+
+.activity-details1::-webkit-scrollbar-thumb {
+    background: rgb(105, 146, 188); /* Darker color to match the gradient */
+    border-radius: 10px;
+    border: 2px solid white; /* Adds a white border to match the glowing effect */
+}
+
+.activity-details1::-webkit-scrollbar-thumb:hover {
+    background: rgb(36, 99, 208); /* Darken on hover */
+}
+
+/* Optional: Styling for horizontal scrollbar (if needed) */
+.activity-details1::-webkit-scrollbar-corner,
+.activity-details1::-webkit-scrollbar-horizontal {
+    height: 5px;
+}
+
+.activity-image1{
+    flex: 1;
+}
+
+.alert_noexist{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(141, 177, 210);
+    
+    font-size: 20px;
+}
+.filter_show_act h4{
+    margin-bottom: 5px;
+}
+.filter-link{
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(135deg, #09203f -30%, #537895 60%);
+    padding:  4px 10px 4px 10px;
+    margin: 4px;   
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-shadow: 2px 4px 6px white;
+}

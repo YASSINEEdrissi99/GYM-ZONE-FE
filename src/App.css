@@ -1,38 +1,234 @@
-.App {
-  text-align: center;
-}
+*{
+  margin: 0;
+  padding: 0;
+ 
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background: linear-gradient(135deg, #09203f 10%, #537895 60%);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.add-regis{
+  height: 45px;
+  width: 290px;
+  border: 2px solid rgba(213, 213, 213, 0.492);
+  border-radius: 6px;
+}
+.main{
+  width: 100%;
+  height: 708.5px;
+  
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* Needed for the absolute positioning of the image */
+}
+
+.btnst{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.up{
+  text-align: center;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 15px;
+ 
+}
+.up h5{
+  margin-top: 3px;
+  font-size: 22px;
+  margin-left: 6px;
+}
+.up i{
+  font-size: 22px;
+  margin-left: 6px;
+}
+.logo-image {
+  width: 22%;
+  position: absolute;
+  height: 25px;
+  bottom: 0px;
+  right: 0;
+  margin: 20px; 
+  /* Add some margin if needed to avoid the edges */
+  
+}
+.logo-image2 {
+  width: 900px;
+  height: 500px;
+  position: absolute;
+  bottom: 130px;
+  right: 120px;
+  margin: 20px;
+   /* Add some margin if needed to avoid the edges */
+}
+
+.navbarhome{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  color: white;
+  display: flex;
+  
+  justify-content: center;
+}
+.links{
+  display: flex;
+  
+  justify-content: space-between;
+  width: 80%;
+  padding: 15px;
+  margin-left: 10px;
+}
+.link_site {
+ 
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 5px;
+  margin-left: 20px;
+  
+}
+.link_site_pages{
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 1px;
+}
+
+.link_log {
+  margin-top: 5px;
+  padding: 5px;
+  
+}
+.gym_logo {
+  margin-top: 10px;
+  font-size: 41px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px rgb(36, 99, 208); /* Glow effect */
+}
+
+.gym_logo .gym {
+  color: white; /* Bright orange for "Gym" */
+  margin-bottom: 0; /* Remove any bottom margin */
+}
+
+.gym_logo .zone {
+  color: white; /* Black for "Zone" */
+  margin-top: 0; /* Remove any top margin */
+  /* Adding a shadow with a different color to differentiate */
+  text-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px rgb(36, 99, 208);
+}
+
+
+
+.login_btn{
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 4px;
+  padding-bottom: 6px;
+  
+  margin-left:10px ;
+  border: solid rgb(43, 53, 111) 2px;
+  border-radius: 40px;
+  text-decoration: none;
+  background: rgb(33, 41, 85);
+  box-shadow: 0 0 5px rgb(43, 53, 111), 0 0 10px rgb(43, 53, 111), 0 0 15px rgb(43, 53, 111);
+  backdrop-filter: blur(20px);
+  margin-bottom: 5px;
+  color: white;
+  font-weight: 600;
+}
+
+.login_btn:hover{
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 6px;
+  padding-bottom: 8px; 
+}
+.welcome{
+  width: 530px;
+  backdrop-filter: blur(10px); /* Adjust the blur intensity as needed */
+    background: linear-gradient(to right, rgb(201, 221, 242), rgb(105, 146, 188)); /* Gradient from light to dark */
+  position: absolute;
+  left: 130px;
+  padding: 30px;
+  bottom: 180px;
+  border-radius: 15px;
+  box-shadow:  0 0 5px white, 0 0 10px white, 0 0 15px rgb(36, 99, 208);
+}
+
+.user-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.user-icon-svg {
+  font-size: 36px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 60%;
+  right: 1%;
+  background: white;
+  color: black;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1000;
+  
+}
+.flexdrp{
+  display: flex;
+  flex-direction: column;
+}
+.user-icon  {
+  cursor: pointer;
+}
+.user-icon .dropdown-menu {
+  display: block; /* Show dropdown when state is true */
+}
+.flexdrp{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  padding: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logout_link{
+  background: transparent;
+  border: none;
+  margin-top: 10px;
+}
+.welcp{
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+.welcp p{
+  font-weight: 500;
+}
+.welcp p span{
+  font-weight: bold;
+  font-size: 27px;
+  font-family: 'Alex Brush', cursive;
 }

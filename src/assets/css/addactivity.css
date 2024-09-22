@@ -1,0 +1,52 @@
+.admin-add-activity-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Gap between columns */
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-column {
+    flex: 1; /* Each column will take up equal space */
+    min-width: 300px; /* Minimum width for responsiveness */
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Gap between form fields */
+}
+
+.admin-add-activity-form input[type="text"],
+.admin-add-activity-form input[type="number"],
+.admin-add-activity-form input[type="time"],
+.admin-add-activity-form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+.admin-add-activity-form button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.admin-add-activity-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .admin-add-activity-form {
+        flex-direction: column;
+    }
+}

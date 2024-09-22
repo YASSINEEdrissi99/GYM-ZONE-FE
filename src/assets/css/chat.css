@@ -1,0 +1,385 @@
+.chatcontainer{
+    width: 100%;
+    position: absolute;
+   padding-left: 10px;
+   padding-right: 10px;
+    top: 140px;
+    height: 569.5px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.usersboxchat{
+    width: 97%;
+    max-width: 97%;
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+  height: 564.5px;
+  background: linear-gradient(135deg, #09203f 10%, #537895 60%); 
+    overflow-x: auto;
+    overflow-y: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2); 
+    align-items: center;
+    gap: 6px;
+    padding: 15px;
+}
+
+.usersboxchat::-webkit-scrollbar {
+    width: 12px;
+}
+
+.usersboxchat::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background of the scrollbar track */
+    border-radius: 6px; 
+}
+
+.usersboxchat::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded corners for the scrollbar handle */
+}
+
+.usersboxchat::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker color on hover */
+    border-radius: 6px; 
+}
+
+
+
+.searchfriend{
+    width: 95%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    height: 35px;
+    min-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.searchfriend input{
+    width: 100%;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding-left: 4px;
+    border-color: transparent;
+    border-radius: 25px;
+    background-color: transparent;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.discussionbox {
+    width: 100%;
+    margin-top: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;/* Ensures content doesn't overflow the box */
+    height: auto;
+}
+
+.discussion-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.discussion-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    border: 2px solid #fff; /* Optional: Add a white border around the image */
+}
+
+
+.discussion-text {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Ensures that content does not overflow */
+    width: 50%;
+}
+
+.discussion-text h3 {
+    margin: 0;
+    color: white;
+    font-size: 21px;
+    white-space: nowrap; /* Prevents the name from wrapping to a new line */
+    overflow: hidden; /* Ensures long names don't overflow */
+    text-overflow: ellipsis; /* Adds an ellipsis if the name is too long */
+}
+
+.discussion-text p {
+    margin: 0;
+    color: lightgray;
+    white-space: nowrap; /* Prevents the email from wrapping */
+    overflow: hidden; /* Ensures long emails don't overflow */
+    text-overflow: ellipsis; /* Adds an ellipsis (...) if the email is too long */
+}
+
+.messageboxchat{
+    flex: 2.9;
+    display: flex;
+    flex-direction: column;
+  height: 594.5px;
+    overflow-y: auto;
+    overflow-x: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2); 
+    align-items: center;
+    gap: 6px;
+    padding: 15px;
+    margin-top: -30px;
+}
+
+
+.chat_name {
+    width: 98%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    height: 80px;
+    display: flex;
+    align-items: center; /* Center content vertically */
+    padding: 10px;
+    gap: 15px; /* Space between the image and h2 */
+}
+
+.chat_name img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+}
+
+.chat_name h2 {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+.messages_cht{
+    color: #fff;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 98%;
+    height: 435px;
+    min-height: 435px;
+    background: linear-gradient(135deg, #071529 10%, #405c71 60%);
+    overflow-y:auto;
+    overflow-x: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2),4px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 4px;
+}
+
+.messages_cht::-webkit-scrollbar {
+    width: 12px;
+}
+
+.messages_cht::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background of the scrollbar track */
+    border-radius: 6px; 
+}
+
+.messages_cht::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.3); /* Color of the scrollbar handle */
+    border-radius: 6px; /* Rounded corners for the scrollbar handle */
+}
+
+.messages_cht::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5); /* Darker color on hover */
+    border-radius: 6px; 
+}
+.friendmsgbox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.friendmsg {
+
+    width: auto;
+    max-width: 50%;
+    background-color: #99b3d5;
+    border-radius: 20px;
+    height: auto;
+    padding: 6px;
+    word-wrap: break-word; /* Ensures long words break and wrap */
+    overflow-wrap: break-word; /* Supports word wrapping in modern browsers */
+}
+.pic_msg{
+    width: 50px;
+    margin: 8px;
+    height: 50px;
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Ensures the image maintains its aspect ratio */
+    border: 2px solid #fff;
+}
+.me{
+    flex-direction: row-reverse; 
+}
+.box_writemsg{
+    width: 98%;
+    height: 38px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: transparent;
+}
+.box_writemsg input{
+    background-color: transparent;
+    width: 80%;
+    height: 100%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding-left: 10px;
+    border-color: transparent;
+    color: #b3dfff;
+
+}
+.box_writemsg button{
+    width: 20%;
+    height: 100%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: #42dadd;
+    border-color: transparent;
+}
+.updateprofilechat form{
+    width: 100%;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.updateprofilechat {
+    flex: 1.2;
+    margin-top: -40px;
+    display: flex;
+    flex-direction: column;
+    height: 564.5px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #09203f 10%, #537895 60%);
+    overflow-y: auto;
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.2); 
+    align-items: center;
+    gap: 6px;
+    padding: 15px;
+}
+
+.profile-image-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 100%;
+    height: 300px;
+    background-color: #405c71;
+    border-radius: 50%; /* Makes the image circular */
+}
+
+.profile-info {
+    text-align: center;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.profile-name {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.profile-description {
+    color: #fff;
+    font-size: 1rem;
+}
+
+.buttonupdatepro{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    border-color: transparent;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 500;
+}
+.buttonupdatepro:hover{
+    border-color: transparent;
+    background-color: transparent;
+    color: #fff;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 700;
+    text-shadow: 2px 3px 6px #fff;
+}
+.div_inputimage{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: transparent;
+}
+.input_image{
+    width: 40%;
+    height: 27px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.div_update_add_pro{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+   border-color: transparent;
+}
+.update_add_pro{
+    width: 40%;
+    height: 32px;
+    font-size: 14px;
+    font-weight: 500;
+    background: linear-gradient(to right, rgb(201, 221, 242), rgb(105, 146, 188)); 
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: transparent;
+}
+.new-message-notification {
+    color: red;
+    font-weight: bold;
+    }
+  
+.update_add_pro:hover{
+    background: linear-gradient(to right, rgb(37, 43, 49), rgb(105, 146, 188)); 
+    width: 50%;
+    height: 40px;
+    font-size: 15px;
+    color: rgb(202, 216, 229);
+    font-weight: 700;
+    text-shadow: 0 1px 4 px #fff;
+    box-shadow: 2px 4px 6px rgb(37, 43, 49);
+}
